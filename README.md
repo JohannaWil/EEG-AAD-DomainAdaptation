@@ -72,5 +72,7 @@ Cite: Fuglsang, S. A., Wong, D. D. E. och Hjortkjær, J. (2018) ”EEG and audio
 
 # Results
 The folder "Results" has two subfolders:
+
 "Author": Results from the author which generated the results and figures in the article. A README.md file in this folder explains the provided data structure.
+
 "User": Where you can put your results to not overwrite data and results from the author
