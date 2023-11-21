@@ -25,6 +25,8 @@ Significance: The findings of our study demonstrate the improved classification 
    Computes before transportation (BT) and parallel transport (PT) on reference and candidate subjects chosen as:
    
    choise 1: Use the result of reference and candidate subjects from "MainBaseline.m
+
+   or
    
    choise 2: Custom your own reference and candidate subjects
    
