@@ -11,17 +11,38 @@ Significance: The findings of our study demonstrate the improved classification 
 
 # Pipeline
 1) Download data (more information below)
-2) Run MainBaseline.m -> computes the baseline classification accuracy for all 18 subjects
-3) Run plotBaselineAcc.m -> plot Figure 4 (baseline subject-specific classification accuracy for all subject without domain adaptation)
-4) Run MainBTandPT.m -> computes before transportation (BT) and parallel transport (PT) on reference and candidate subjects chosen as:
+   
+2) Run MainBaseline.m
+   
+   Computes the baseline classification accuracy for all 18 subjects
+   
+3) Run plotBaselineAcc.m
+  
+   Plot Figure 4 (baseline subject-specific classification accuracy for all subject without domain adaptation)
+   
+4) Run MainBTandPT.m
+  
+   Computes before transportation (BT) and parallel transport (PT) on reference and candidate subjects chosen as:
+   
    choise 1: Use the result of reference and candidate subjects from "MainBaseline.m
+   
    choise 2: Custom your own reference and candidate subjects
+   
 5) Run MainBTandPT.m with:
+   
    choise 3: For each candidate subject from "MainBaseline.m", use all other 17 subjects as reference subjects
-6) Run evaluateBTandPT.m -> plots Figure 5 and evaluates which two reference combinations that perform the best accuracy increase
+
+6) Run evaluateBTandPT.m
+    
+    Plot Figure 5 and evaluates which two reference combinations that perform the best accuracy increase
+    
 7) Run MainBTandPT.m with:
-   choise 4: computes the classification accuracy for the two best reference combinations on all other subjects
-8) Run plotBestRefCombinations.m -> plots Figure 6 
+    
+   choise 4: Computes the classification accuracy for the two best reference combinations on all other subjects
+   
+8) Run plotBestRefCombinations.m
+
+    Plot Figure 6 
    
 # Data
 Downloaded data from https://zenodo.org/record/1199011#.XnRypqhKjDf.
