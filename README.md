@@ -75,19 +75,23 @@ The output needs to be in the format:
 
 Events: 
 
-   {1, nSubjects}
-      {1, nTrials}
-         {3200, nCh}
+
+    {1, nSubjects}
+       {1, nTrials}
+          {3200, nCh}
+
    
 vClassMF (Male/Female class labels): 
 
-   {1, nSubjects}
-      {1, nTrials}
+
+    {1, nSubjects}
+       {1, nTrials}
+
    
 vClassLR (Left/Right class labels): 
 
     {1, nSubjects}
-      {1, nTrials}
+       {1, nTrials}
     
 where:
 
