@@ -64,22 +64,39 @@ Parallel Transport (PT): LOO-CV classification accuracy after temporal concatena
 Downloaded data from https://zenodo.org/record/1199011#.XnRypqhKjDf [2].
 
 You will need to download: 
+
 DATA_preproc: Data after preprocessing (download the script preproc_data.m to understand all the preprocessing steps).
 
 The data is downsampled to 64Hz.
 
 If you want to use another dataset, the script getData.m needs to get modified for laoding and extracting the data. 
+
 The output needs to be in the format:
 
-Events: nSubjects x 1 cells -> 1 x nTrials cells -> 3200 x (#EEGchannels + #audioFiles) where 3200 is the number of samples.
-vClassMF (Male/Female class labels): nSubjects x 1 cells -> 1 x nTrials vector.
-vClassLR (Left/Right class labels): nSubjects x 1 cells -> 1 x nTrials vector.
+Events: 
+
+   {1, nSubjects}
+      {1, nTrials}
+         {3200, nCh}
+   
+vClassMF (Male/Female class labels): 
+
+   {1, nSubjects}
+      {1, nTrials}
+   
+vClassLR (Left/Right class labels): 
+
+    {1, nSubjects}
+      {1, nTrials}
     
 where:
+
 nSubjects: number of subjects.
+
 nTrials: number of trials.
-#EEGchannels: number of EEG channels.
-#audioFiles: number of audio files.
+
+nCh: number of EEG channels.
+
 3200: number of samples (in this case since the data is 50s long and sampled at a frequency of 64Hz).
 
 
