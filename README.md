@@ -1,4 +1,4 @@
-# EEGbasedLoAwithDomainAdaptation
+# EEG-AAD-DomainAdaptation
 
 MATLAB code and tutorial to run the results presented in "Improving EEG-Based Decoding of the Locus of Auditory Attention through Domain Adaptation" by Johanna Wilroth, Bo Bernhardsson, Frida Heskebeck, Martin A. Skoglund, Carolina Bergeling and Emina Alickovic. Journal of Neural Engineering, 2023 (in proceedings).
 
@@ -8,6 +8,20 @@ Approach: This paper focuses on investigating a domain adaptation method, based 
 Main results: Significant improvement in classification accuracy was observed when poor data from one subject was transported to the domain of good data from different subjects, as compared to the baseline. The mean classification accuracy for subjects
 with poor data increased from 45.84% to 67.92%. Specifically, the highest achieved classification accuracy from one subject reached 83.33%, a substantial increase from the baseline accuracy of 43.33%.
 Significance: The findings of our study demonstrate the improved classification performances achieved through the implementation of domain adaptation methods. This brings us a step closer to leveraging EEG in neuro-steered hearing devices.
+
+# Definitions
+
+LOO-CV: Leave-One-Out Cross-Validation.
+
+Baseline: LOO-CV classification accuracy computed for each subject.
+
+Candidate subjects: Subjects who exhibit low baseline classification accuracy and may benefit from domain adaptation.
+
+Reference subjects: Subjects with high baseline classification accuracy.
+
+Before Transportation (BT): LOO-CV classification accuracy after temporal concatenation of the reference and candidate subject datasets.
+
+Parallel Transport (PT): LOO-CV classification accuracy after temporal concatenation of the reference and candidate subject datasets and utalization of the domain adaptation method "Parallel Transport" [1].
 
 # Pipeline
 1) Download data (more information below)
@@ -47,7 +61,7 @@ Significance: The findings of our study demonstrate the improved classification 
     Plot Figure 6 
    
 # Data
-Downloaded data from https://zenodo.org/record/1199011#.XnRypqhKjDf.
+Downloaded data from https://zenodo.org/record/1199011#.XnRypqhKjDf [2].
 
 You will need to download: 
 DATA_preproc: Data after preprocessing (download the script preproc_data.m to understand all the preprocessing steps).
@@ -68,7 +82,6 @@ nTrials: number of trials.
 #audioFiles: number of audio files.
 3200: number of samples (in this case since the data is 50s long and sampled at a frequency of 64Hz).
 
-Cite: Fuglsang, S. A., Wong, D. D. E. och Hjortkjær, J. (2018) ”EEG and audio dataset for auditory attention decoding”. Zenodo. doi: 10.5281/zenodo.1199011. 
 
 # Results
 The folder "Results" has two subfolders:
@@ -76,3 +89,8 @@ The folder "Results" has two subfolders:
 "Author": Results from the author which generated the results and figures in the article. A README.md file in this folder explains the provided data structure.
 
 "User": Where you can put your results to not overwrite data and results from the author
+
+# References
+[1] Yair, Or & Ben-Chen, Mirela & Talmon, Ronen. (2019). Parallel Transport on the Cone Manifold of SPD Matrices for Domain Adaptation. IEEE Transactions on Signal Processing. PP. 1-1. 10.1109/TSP.2019.2894801. 
+
+[2] Fuglsang, S. A., Wong, D. D. E. och Hjortkjær, J. (2018) ”EEG and audio dataset for auditory attention decoding”. Zenodo. doi: 10.5281/zenodo.1199011.
